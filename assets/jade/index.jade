@@ -11,8 +11,30 @@ html
             h5= h5 
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
     mixin button (text)
-        .main-btn: a(href="#")= text 
+        .main-btn: a(href="#")= text
+    mixin portfolio-img (source, alt, name, type)
+        .col-lg-4.col-md-4.col-sm-4.portfolio-each
+            img(src=source, alt=alt)
+            .portfolio-box
+                p= name
+                p= type
+    mixin social 
+        .social-box
+            a(href="#"): i(class="fa fa-twitter")
+            a(href="#"): i(class="fa fa-facebook")
+            a(href="#"): i(class="fa fa-linkedin")
+    mixin team (source, alt, name, duty)
+        .col-lg-4.col-md-4.col-sm-4
+            img(src=source, alt=alt class="img-circle")
+            p.name= name
+            p= duty
+            +social
+    mixin clients (source, alt)
+        .col-lg-3.col-md-3.col-sm-3
+            img(src=source, alt=alt)
     head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
         title Agency Theme
         link(rel="stylesheet", href="assets/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Montserrat', type='text/css')
@@ -27,20 +49,74 @@ html
                 nav
                     h3 Start Bootstrap
                     ul
-                        li: a(href="#") services
-                        li: a(href="#") portfolio
-                        li: a(href="#") about
-                        li: a(href="#") team
-                        li: a(href="#") contact
+                        li: a(href="#services") services
+                        li: a(href="#portfolio") portfolio
+                        li: a(href="#about") about
+                        li: a(href="#team") team
+                        li: a(href="#contact") contact
                 h2 <i>Welcome To Our Studio!</i>
                 h1 it's nice to meet you
                 +button ("tell me more")
-    section#services
-        .container.text-center
-            +headings ("services")
-            .row
-                +services-box ("fa fa-shopping-cart", "E-Commerce")
-                +services-box ("fa fa-laptop", "Responsive Design")
-                +services-box ("fa fa-lock", "Web Security")
+        section#services
+            .container.text-center
+                +headings ("services")
+                .row
+                    +services-box ("fa fa-shopping-cart", "E-Commerce")
+                    +services-box ("fa fa-laptop", "Responsive Design")
+                    +services-box ("fa fa-lock", "Web Security")
+        section#portfolio
+            .container.text-center
+                +headings ("portfolio")
+                .row
+                    +portfolio-img ("img/portfolio/roundicons.png", "roundicons", "Round Icons", "Graphic Design")
+                    +portfolio-img ("img/portfolio/startup-framework.png", "startup-framework", "Startup Framework", "Website Design")
+                    +portfolio-img ("img/portfolio/treehouse.png", "treehouse", "Treehouse", "Website Design") 
+                .row
+                    +portfolio-img ("img/portfolio/golden.png", "golden", "Golden", "Website Design") 
+                    +portfolio-img ("img/portfolio/escape.png", "escape", "Escape", "Website Design") 
+                    +portfolio-img ("img/portfolio/dreams.png", "dreams", "Dreams", "Website Design")
+        section#about
+            .container.text-center
+                +headings ("about")
+        section#team
+            .container.text-center
+                +headings ("our amazing team")
+                .row
+                    +team ("img/team/1.jpg", "Kay-Garland", "Kay Garland", "Lead Designer")
+                    +team ("img/team/2.jpg", "Larry-Parker", "Larry Parker", "Lead Marketer")
+                    +team ("img/team/3.jpg", "Diana-Pertersen", "Diana Pertersen", "Lead Developer")
+                p.team-main-p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea , alis ut unde. 
+        section#clients
+            .container.text-center
+                .row
+                    +clients ("img/logos/envato.jpg", "envato")
+                    +clients ("img/logos/designmodo.jpg", "designmodo")
+                    +clients ("img/logos/themeforest.jpg", "themeforest")
+                    +clients ("img/logos/creative-market.jpg", "creative-market")
+        section#contact
+            .container.text-center
+                +headings ("contact us")
+                .row
+                    .col-lg-6.col-md-6.col-sm-6
+                        input(type="text", placeholder="your name *")
+                        input(type="text", placeholder="your email *")
+                        input(type="text", placeholder="your phones *")
+                    .col-lg-6.col-md-6.col-sm-6
+                        textarea(placeholder="your message *")
+                +button ("send message")
+        footer
+            .container.text-center
+                .row
+                    .col-lg-4.col-md-4.col-sm-4
+                        p Copyright © Your Website 2014
+                    .col-lg-4.col-md-4.col-sm-4
+                        +social
+                    .col-lg-4.col-md-4.col-sm-4
+                        a(href="#") Privacy Policy
+                        a(href="#") Terms of use
+    Script(src="assets/js/jquery.js")
+    Script(src="assets/js/bootstrap.min.js")
+    Script(src="assets/js/main.js")
+                    
 
                 

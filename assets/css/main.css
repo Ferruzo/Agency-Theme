@@ -4,6 +4,8 @@ header {
   background-position: center;
   padding: 30px;
   color: #fff; }
+  header .container {
+    width: 100%; }
   header h3 {
     color: #FED136;
     font-family: Kaushan Script;
@@ -48,9 +50,12 @@ nav a:hover {
   color: #FED136;
   text-decoration: none;
   background-color: #414141; }
+nav a:focus {
+  color: #fff;
+  text-decoration: none; }
 
 #services {
-  padding: 5%; }
+  padding: 7% 0; }
   #services .row {
     margin-top: 70px; }
   #services .services-icon {
@@ -63,6 +68,7 @@ nav a:hover {
     margin: auto; }
   #services h5 {
     font-weight: bold;
+    font-family: Montserrat;
     margin: 20px auto;
     font-size: 1.5rem; }
   #services p {
@@ -77,6 +83,115 @@ nav a:hover {
 .headings p {
   font-style: italic;
   font-family: Droid Serif;
-  font-size: 1.8rem; }
+  color: #A5A0A6;
+  font-size: 1.4rem; }
+
+#portfolio {
+  padding: 7% 0;
+  background-color: #F7F7F7; }
+  #portfolio img {
+    width: 100%; }
+  #portfolio .portfolio-each {
+    margin: 40px auto; }
+  #portfolio .portfolio-box {
+    background-color: #fff;
+    padding: 15px; }
+    #portfolio .portfolio-box p:first-child {
+      margin-bottom: 0;
+      font-weight: bold;
+      font-family: Montserrat; }
+    #portfolio .portfolio-box p:last-child {
+      font-style: italic;
+      font-family: Droid Serif;
+      color: #A5A0A6; }
+
+#about {
+  padding: 7% 0;
+  background-color: #fff; }
+
+#team {
+  padding: 7% 0;
+  background-color: #F7F7F7; }
+  #team img {
+    border: 5px solid #fff;
+    width: 60%; }
+  #team .team-main-p {
+    color: #A5A0A6;
+    font-family: Droid Serif;
+    font-size: 1.4rem;
+    width: 60%;
+    margin: 50px auto 0; }
+  #team .row {
+    margin-top: 60px; }
+  #team .name {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-family: Montserrat; }
+  #team p:nth-child(3) {
+    color: #A5A0A6;
+    font-family: Droid Serif;
+    font-size: 1.4rem; }
+
+.social-box a {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 5px;
+  width: 30px;
+  border-radius: 100%;
+  margin: 0 5px 10px; }
+.social-box a:hover {
+  background-color: #FED136; }
+
+#clients {
+  padding: 7% 0; }
+
+#contact {
+  background-color: #222222;
+  padding: 7% 0; }
+  #contact .headings h2 {
+    color: #fff; }
+  #contact .row {
+    margin-top: 80px; }
+  #contact input {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    border: 0; }
+  #contact textarea {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    border: 0;
+    height: 177px; }
+  #contact .main-btn {
+    margin-bottom: 25px;
+    margin-top: 20px; }
+
+footer {
+  font-family: Montserrat;
+  padding: 20px 0; }
+  footer a {
+    color: #FED136;
+    margin-right: 10px; }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  header h1 {
+    font-size: 4rem; }
+  header h2 {
+    font-size: 2.5rem; } }
 
 /*# sourceMappingURL=main.css.map */

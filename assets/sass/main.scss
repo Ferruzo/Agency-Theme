@@ -1,20 +1,45 @@
 $yellow: #FED136;
 $grey-text: #A5A0A6;
+$light-grey: #F7F7F7;
+$light-black: #222222;
 
 @mixin uppercase-font {
     text-transform: uppercase;
     font-family: Montserrat;
 }
 @mixin section-padding {
-    padding: 5%;
+    padding: 7% 0;
 }
-
+@mixin droid-italics {
+    font-style: italic;
+    font-family: Droid Serif;
+    color: $grey-text;
+}
+@mixin droid-p {
+    color: $grey-text;
+    font-family: Droid Serif;
+    font-size: 1.4rem;
+}
+@mixin input {
+    @include uppercase-font;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    border: 0;
+}
 header {
     background-image: url(../../img/header-bg.jpg);
     background-size: cover;
     background-position: center;
     padding: 30px;
     color: #fff;
+    .container {
+        width: 100%;
+    }
     h3 {
         color: $yellow;
         font-family: Kaushan Script;
@@ -69,6 +94,10 @@ nav {
         text-decoration: none;
         background-color: #414141;
     }
+    a:focus {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 #services {
@@ -87,13 +116,12 @@ nav {
     }
     h5 {
         font-weight: bold;
+        font-family: Montserrat;
         margin: 20px auto;
         font-size: 1.5rem;
     }
     p {
-        color: $grey-text;
-        font-family: Droid Serif;
-        font-size: 1.4rem;
+        @include droid-p;
     }
 }
 
@@ -103,8 +131,124 @@ nav {
         font-weight: bold;
     }
     p {
-        font-style: italic;
-        font-family: Droid Serif;
-        font-size: 1.8rem;
+        @include droid-italics;
+        font-size: 1.4rem;
+    }
+}
+
+#portfolio {
+    @include section-padding;
+    background-color: $light-grey;
+    img {
+        width: 100%;
+    }
+    .portfolio-each {
+        margin: 40px auto;
+    }
+    .portfolio-box {
+        background-color: #fff;
+        padding: 15px;
+        p:first-child {
+            margin-bottom: 0;
+            font-weight: bold;
+            font-family: Montserrat;
+        }
+        p:last-child {
+            @include droid-italics;
+        }
+    }
+}
+
+#about {
+    @include section-padding;
+    background-color: #fff;
+}
+
+#team {
+    @include section-padding;
+    background-color: $light-grey;
+    img {
+        border: 5px solid #fff;
+        width: 60%;
+    }
+    .team-main-p {
+        @include droid-p;
+        width: 60%;
+        margin: 50px auto 0;
+    }
+    .row {
+        margin-top: 60px;
+    }
+    .name {
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-family: Montserrat;
+    }
+    p:nth-child(3) {
+        @include droid-p;
+    }
+}
+
+.social-box {
+    a {
+        background-color: #000;
+        color: #fff;
+        display: inline-block;
+        padding: 5px;
+        width: 30px;
+        border-radius: 100%;
+        margin: 0 5px 10px;
+    }
+    a:hover {
+        background-color: $yellow;
+    }
+}
+
+#clients {
+    @include section-padding;
+}
+
+#contact {
+    background-color: $light-black;
+    @include section-padding;
+    .headings {
+        h2 {
+            color: #fff;
+        }
+    }
+    .row {
+        margin-top: 80px;
+    }
+    input {
+        @include input;
+    }
+    textarea {
+        @include input;
+        height: 177px;
+    }
+    .main-btn {
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+}
+
+footer {
+    font-family: Montserrat;
+    padding: 20px 0;
+    a {
+        color: $yellow;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:768px) {
+    header {
+        h1 {
+            font-size: 4rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
     }
 }
