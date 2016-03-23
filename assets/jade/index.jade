@@ -1,13 +1,17 @@
 doctype html
 html
     mixin headings (h2)
-        h2= h2
-        p Lorem ipsum dolor sit amet consectetur
-    mixin services-box (h5)
+        .headings
+            h2= h2
+            p Lorem ipsum dolor sit amet consectetur
+    mixin services-box (clase, h5)
         .col-lg-4.col-md-4
             .services-icon
+                i(class=clase)
             h5= h5 
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. 
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+    mixin button (text)
+        .main-btn: a(href="#")= text 
     head
         title Agency Theme
         link(rel="stylesheet", href="assets/font-awesome/css/font-awesome.min.css")
@@ -23,19 +27,19 @@ html
                 nav
                     h3 Start Bootstrap
                     ul
-                        li <a href="#">services</a>
-                        li <a href="#">portfolio</a>
-                        li <a href="#">about</a>
-                        li <a href="#">team</a>
-                        li <a href="#">contact</a>
+                        li: a(href="#") services
+                        li: a(href="#") portfolio
+                        li: a(href="#") about
+                        li: a(href="#") team
+                        li: a(href="#") contact
                 h2 <i>Welcome To Our Studio!</i>
                 h1 it's nice to meet you
-                .main-btn<a href="#">tell me more</a>
+                +button ("tell me more")
     section#services
         .container.text-center
             +headings ("services")
             .row
-                +services-box ("E-commerce")
-                +services-box ("Responsive Design")
-                +services-box ("Web Security")
+                +services-box ("fa fa-shopping-cart", "E-Commerce")
+                +services-box ("fa fa-laptop", "Responsive Design")
+                +services-box ("fa fa-lock", "Web Security")
                 

@@ -1,11 +1,12 @@
 $yellow: #FED136;
+$grey-text: #A5A0A6;
 
 @mixin uppercase-font {
     text-transform: uppercase;
     font-family: Montserrat;
 }
 @mixin section-padding {
-    padding: 4%;
+    padding: 5%;
 }
 
 header {
@@ -72,4 +73,38 @@ nav {
 
 #services {
     @include section-padding;
+    .row {
+        margin-top: 70px;
+    }
+    .services-icon {
+        background-color: $yellow;
+        color: #fff;
+        font-size: 5rem;
+        border-radius: 100%;
+        width: 80px;
+        padding: 5px;
+        margin: auto;
+    }
+    h5 {
+        font-weight: bold;
+        margin: 20px auto;
+        font-size: 1.5rem;
+    }
+    p {
+        color: $grey-text;
+        font-family: Droid Serif;
+        font-size: 1.4rem;
+    }
+}
+
+.headings {
+    h2 {
+        @include uppercase-font;
+        font-weight: bold;
+    }
+    p {
+        font-style: italic;
+        font-family: Droid Serif;
+        font-size: 1.8rem;
+    }
 }

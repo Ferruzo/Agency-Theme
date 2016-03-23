@@ -50,6 +50,33 @@ nav a:hover {
   background-color: #414141; }
 
 #services {
-  padding: 4%; }
+  padding: 5%; }
+  #services .row {
+    margin-top: 70px; }
+  #services .services-icon {
+    background-color: #FED136;
+    color: #fff;
+    font-size: 5rem;
+    border-radius: 100%;
+    width: 80px;
+    padding: 5px;
+    margin: auto; }
+  #services h5 {
+    font-weight: bold;
+    margin: 20px auto;
+    font-size: 1.5rem; }
+  #services p {
+    color: #A5A0A6;
+    font-family: Droid Serif;
+    font-size: 1.4rem; }
+
+.headings h2 {
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: bold; }
+.headings p {
+  font-style: italic;
+  font-family: Droid Serif;
+  font-size: 1.8rem; }
 
 /*# sourceMappingURL=main.css.map */
