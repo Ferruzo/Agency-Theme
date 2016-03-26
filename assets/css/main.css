@@ -107,7 +107,61 @@ nav a:focus {
 
 #about {
   padding: 7% 0;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
+  #about .timeline-img {
+    position: relative;
+    z-index: 1; }
+    #about .timeline-img img {
+      border: 7px solid #F7F7F7;
+      width: 160px; }
+  #about a {
+    background-color: #FED136;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    color: white;
+    font-weight: bold;
+    padding: 40px;
+    border-radius: 50%;
+    border: 7px solid #F7F7F7;
+    text-decoration: none;
+    display: block;
+    width: 160px;
+    margin: 100px auto;
+    z-index: 1;
+    position: relative; }
+  #about .line {
+    height: 1000px;
+    background-color: #F7F7F7;
+    width: 5px;
+    top: 25%;
+    left: 50%;
+    position: absolute; }
+
+.timeline-box {
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 100px; }
+  .timeline-box .timeline-text1 {
+    position: absolute;
+    width: 30%;
+    left: 10%;
+    top: 0%; }
+  .timeline-box .timeline-text2 {
+    position: absolute;
+    width: 30%;
+    right: 10%;
+    top: 0%; }
+  .timeline-box p {
+    color: #A5A0A6;
+    font-family: Droid Serif;
+    font-size: 1.4rem; }
+  .timeline-box h5 {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: bold; }
+  .timeline-box h5:nth-child(2) {
+    text-transform: capitalize; }
 
 #team {
   padding: 7% 0;
@@ -188,10 +242,15 @@ footer {
     color: #FED136;
     margin-right: 10px; }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 1100px) {
   header h1 {
     font-size: 4rem; }
   header h2 {
-    font-size: 2.5rem; } }
+    font-size: 2.5rem; }
+
+  #about .timeline-text1 {
+    display: none; }
+  #about .timeline-text2 {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

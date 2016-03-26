@@ -32,6 +32,22 @@ html
     mixin clients (source, alt)
         .col-lg-3.col-md-3.col-sm-3
             img(src=source, alt=alt)
+    mixin about-left (src, date, title)
+        .timeline-box
+            .timeline-img
+                img(src=src class="img-circle")
+            .timeline-text1(class="text-right")
+                h5= date
+                h5= title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing eit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+    mixin about-right (src, date, title)
+        .timeline-box
+            .timeline-img
+                img(src=src class="img-circle")
+            .timeline-text2(class="text-left")
+                h5= date
+                h5= title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing eit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
     head
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -78,6 +94,14 @@ html
         section#about
             .container.text-center
                 +headings ("about")
+                .timeline
+                    +about-left ("img/about/1.jpg", "2009-2011", "Our Humble Beginnings")
+                    +about-right ("img/about/2.jpg", "March 2011", "An Agency is Born")
+                    +about-left ("img/about/3.jpg", "December 2012", "Transition to Full Service")
+                    +about-right ("img/about/4.jpg", "July 2014", "Phase Two Expansion")
+                    a(href="#") be part of our story!
+                    .line
+                         
         section#team
             .container.text-center
                 +headings ("our amazing team")

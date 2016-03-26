@@ -162,6 +162,66 @@ nav {
 #about {
     @include section-padding;
     background-color: #fff;
+    position: relative;
+    .timeline-img {
+        position: relative;
+        z-index: 1;
+        img {
+            border: 7px solid $light-grey;
+            width: 160px;
+        }
+    }
+    a {
+        background-color: $yellow;
+        @include uppercase-font;
+        color: white;
+        font-weight: bold;
+        padding: 40px;
+        border-radius: 50%;
+        border: 7px solid $light-grey;
+        text-decoration: none;
+        display: block;
+        width: 160px;
+        margin: 100px auto;
+        z-index: 1;
+        position: relative;
+    }
+    .line {
+        height: 1000px;
+        background-color: $light-grey;
+        width: 5px;
+        top: 25%;
+        left: 50%;
+        position: absolute;
+    }
+}
+
+.timeline-box {
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    .timeline-text1 {
+        position: absolute;
+        width: 30%;
+        left: 10%;
+        top: 0%;
+    }
+    .timeline-text2 {
+        position: absolute;
+        width: 30%;
+        right: 10%;
+        top: 0%;
+    }
+    p {
+        @include droid-p;
+    }
+    h5 {
+        @include uppercase-font;
+        font-weight: bold;
+    }
+    h5:nth-child(2) {
+        text-transform: capitalize;
+    }
 }
 
 #team {
@@ -242,13 +302,21 @@ footer {
     }
 }
 
-@media screen and (min-width:0px) and (max-width:768px) {
+@media screen and (min-width:0px) and (max-width:1100px) {
     header {
         h1 {
             font-size: 4rem;
         }
         h2 {
             font-size: 2.5rem;
+        }
+    }
+    #about {
+        .timeline-text1 {
+            display: none;
+        }
+        .timeline-text2 {
+            display: none;
         }
     }
 }
